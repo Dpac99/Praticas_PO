@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
 
 class Individual{
 public:
@@ -11,7 +10,7 @@ public:
 
 class Collective: public Individual{
 private:
-    vector<Individual*> _group = std::vector<Individual*>();
+    std::vector<Individual*> _group = std::vector<Individual*>();
 public:
     void addIndividual(Individual* i){
         _group.push_back(i);
@@ -114,8 +113,8 @@ int main(){
     v2->receiveAid(1000);
     i1->receiveAid(5);
 
-    cout<<"Region: "<< r->getAid() << endl;
-    cout <<"Village 1: " << v1->getAid() << endl;
-    cout <<"Village 2: " << v2->getAid() << endl;
+    std::cout<<"Region: "<< r->getAid() << std::endl;
+    std::cout <<"Village 1: " << v1->getAid() << std::endl;
+    std::cout <<"Village 2: " << v2->getAid() << std::endl;
     
 }

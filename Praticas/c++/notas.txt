@@ -1,0 +1,1 @@
+int(8) -> constructor de inteiro, preferivel a cast ((int) 8 )
